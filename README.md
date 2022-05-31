@@ -6,6 +6,7 @@ An app for listing jobs.
 
 ## Usage
 
+
 ### Migrations
 To create all the nessesary tables and columns, run the following
 ```
