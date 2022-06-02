@@ -33,7 +33,6 @@ class ListingController extends Controller
     // Store Listing Data
     // I am using dependency injection data as a parameter
     public function store(Request $request) {
-//        dd($request->all());
 
 //        This validation is going to take in an array
 //        we can specify what rules we want for certain fields
@@ -48,6 +47,11 @@ class ListingController extends Controller
             'tags'        => 'required',
             'description' => 'required'
         ]);
+
+        // Checking if there was an image uploaded
+        if($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
 
         Listing::create($formFields);
 

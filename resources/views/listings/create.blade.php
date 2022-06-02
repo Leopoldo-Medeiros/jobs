@@ -7,7 +7,7 @@
             <p class="mb-4">Post a job to find a developer</p>
         </header>
 
-        <form method="POST" action="/listings">
+        <form method="POST" action="/listings" enctype="multipart/form-data">
             <!-- In Laravel there's a directive that you want to use anytime you have -->
             <!-- a post form you want to use this directive, and it's going to be "@csrf" -->
             <!-- What it does is to prevent cross-site scripting attacks -->
@@ -67,12 +67,15 @@
                 @enderror
             </div>
 
-{{--            <div class="mb-6">--}}
-{{--                <label for="logo" class="inline-block text-lg mb-2">--}}
-{{--                    Company Logo--}}
-{{--                </label>--}}
-{{--                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo"/>--}}
-{{--            </div>--}}
+            <div class="mb-6">
+                <label for="logo" class="inline-block text-lg mb-2">
+                    Company Logo
+                </label>
+                <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo"/>
+                @error('logo')
+                <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
 
             <div class="mb-6">
                 <label for="description" class="inline-block text-lg mb-2">

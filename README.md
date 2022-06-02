@@ -6,11 +6,6 @@ An app for listing jobs.
 
 ## Usage
 
-### Database Setup
-This app uses MySQL. To use something different, open up config/Database.php and change the default driver.
-
-To use MySQL, make sure you install it, setup a database and then add your db credentials(database, username and password) to the .env.example file and rename it to .env
-
 ### Migrations
 To create all the nessesary tables and columns, run the following
 ```
@@ -26,5 +21,10 @@ php artisan db:seed
 ### Running The App
 Upload the files to your document root, or run 
 ```
-php artisan serve
+This app uses the framework Laravel and the server runs by using the Package Sail, which is installed via composer:
+
+1. Make sure you have Docker installed on your machine
+2. In the Terminal run "composer install" into the project
+3. Run the command "sail up -d" to start the server
+4. Run the command "sail down" to stop the server
 ```
