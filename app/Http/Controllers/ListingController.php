@@ -14,7 +14,7 @@ class ListingController extends Controller
         return view('listings.index',[
             // It's going to get passed in as the $filters declared as an array in Listing.php (Model)
             'listings' => Listing::latest()->filter(request(['tag',
-            'searchX']))->paginate(4)
+            'search']))->paginate(4)
         ]);
     }
 
