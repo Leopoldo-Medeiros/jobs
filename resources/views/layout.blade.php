@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <title>Jobs | Find Jobs & Projects</title>
+
 </head>
 <body class="mb-48">
 <nav class="flex justify-between items-center mb-4">

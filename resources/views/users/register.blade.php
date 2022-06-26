@@ -13,7 +13,9 @@
             <label for="name" class="inline-block text-lg mb-2">
                 Name
             </label>
-            <input type="text" class="border border-gray-200 rounded p-2 w-full" name="name" />
+            <label>
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="name" value="{{old('name')}}" />
+            </label>
 
             <!-- Error Message -->
             @error('name')
@@ -22,10 +24,12 @@
         </div>
 
         <div class="mb-6">
-            <label for="email" class="inline-block text-lg mb-2">Email</label>
-            <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" />
+            <label for="email" class="inline-block text-lg mb-2">
+                Email
+            </label>
+            <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" value={{old('email')}} />
 
-            <!-- Error Message -->
+            {{--  Error Message --}}
             @error('email')
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
@@ -35,8 +39,9 @@
             <label for="password" class="inline-block text-lg mb-2">
                 Password
             </label>
-            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password" />
-            <!-- Error Message -->
+            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password" value={{old('password')}} />
+
+            {{--   Error Message--}}
             @error('password')
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
@@ -46,8 +51,9 @@
             <label for="password2" class="inline-block text-lg mb-2">
                 Confirm Password
             </label>
-            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password_confirmation" />
-            <!-- Error Message -->
+            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password_confirmation" value={{old('password_confirmation')}} />
+
+            {{--   Error Message--}}
             @error('password_confirmation')
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
