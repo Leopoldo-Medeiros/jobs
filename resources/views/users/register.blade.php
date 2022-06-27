@@ -27,7 +27,7 @@
             <label for="email" class="inline-block text-lg mb-2">
                 Email
             </label>
-            <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" value={{old('email')}} />
+            <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" value="{{old('email')}}" />
 
             {{--  Error Message --}}
             @error('email')
@@ -39,7 +39,7 @@
             <label for="password" class="inline-block text-lg mb-2">
                 Password
             </label>
-            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password" value={{old('password')}} />
+            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password" value="{{old('password')}}" />
 
             {{--   Error Message--}}
             @error('password')
@@ -51,7 +51,7 @@
             <label for="password2" class="inline-block text-lg mb-2">
                 Confirm Password
             </label>
-            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password_confirmation" value={{old('password_confirmation')}} />
+            <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password_confirmation" value="{{old('password_confirmation')}}" />
 
             {{--   Error Message--}}
             @error('password_confirmation')

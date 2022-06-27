@@ -20,6 +20,7 @@
             };
         </script>
         <title>Jobs | Find Jobs & Projects</title>
+        <link rel="icon" href="public/images/logo.png" type="image/x-icon">
     </head>
     <body class="mb-48">
     <nav class="flex justify-between items-center mb-4">
