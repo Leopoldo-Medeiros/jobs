@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
+            /**
+             * If there's a user that creates a bunch of listings and that user is deleted for some reason
+             * then the listings will also cascade those and delete
+             */
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->string('logo')->nullable();
             $table->string('tags');

@@ -37,4 +37,15 @@ class Listing extends Model
             ;
         }
     }
+
+    // Relationship To User
+    /**
+     * What it is doing?
+     * The listing model belongs to a user, and this is where that id is going to be stored
+     *
+     * The file name is "Listing". So the relationship to a user is listing belongs to a user.
+     */
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
