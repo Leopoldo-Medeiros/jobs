@@ -97,5 +97,12 @@ class ListingController extends Controller
                 $listing->delete();
                 return redirect('/')->with('message','Listing deleted successfully!');
             }
+
+            // Manage Listings
+            public function manage() {
+                // By creating the relationships in with eloquent it comes handy
+                // It should get all the currently  logged-in users listings and pass them into this view as listings
+                return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
+            }
         
 }
