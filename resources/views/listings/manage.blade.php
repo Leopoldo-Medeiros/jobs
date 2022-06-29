@@ -2,8 +2,7 @@
     <x-card class="p-10">
         <div class="bg-gray-50 border border-gray-200 p-10 rounded">
             <header>
-                <h1
-                        class="text-3xl text-center font-bold my-6 uppercase">
+                <h1 class="text-3xl text-center font-bold my-6 uppercase">
                     Manage Jobs
                 </h1>
             </header>

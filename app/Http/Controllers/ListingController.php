@@ -71,8 +71,13 @@ class ListingController extends Controller
 
         //        This validation is going to take in an array
         //        we can specify what rules we want for certain fields
-        
-                $formFields = $request->validate([
+
+        // Make sure logged-in user is owner
+        if($listing->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+
+        $formFields = $request->validate([
                     'title'       => 'required',
                     'company'     => ['required'],
                     'location'    => 'required',
@@ -94,6 +99,12 @@ class ListingController extends Controller
 
             // Delete Listing
             public function destroy(Listing $listing) {
+
+                // Make sure logged-in user is owner
+                if($listing->user_id != auth()->id()) {
+                    abort(403, 'Unauthorized Action');
+                }
+
                 $listing->delete();
                 return redirect('/')->with('message','Listing deleted successfully!');
             }
