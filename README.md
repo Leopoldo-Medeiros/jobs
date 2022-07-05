@@ -19,26 +19,23 @@ php artisan db:seed
 ```
 
 ### Running The App
-Upload the files to your document root, or run 
-```
-This app uses the framework Laravel and the server runs by using the Package Sail, which is installed via composer:
+Upload the files to your document root, this app uses the framework Laravel and the server runs by using the Package Sail, which is installed via composer:
 
 1. Make sure you have Docker installed on your machine
 2. In the Terminal run "composer install" into the project
-3. Run the command "sail up -d" to start the server
+3. Run the command:
 
-```
-cp .env.example .env
-
-php artisan key:generate --ansi
-
-sail up -d
+```bash
+$ cp .env.example .env 
+$ php artisan key:generate --ansi
+$ sail up -d
 ```
 
 4. After finish docker up the machine:
-```
-sail composer install 
-sail artisan migrate --seed
+
+```bash
+$ sail composer install
+$ sail artisan migrate --seed
 ```
 
-5. To stop the server run the command "sail down"
+5. To stop the server un the command "sail down"
