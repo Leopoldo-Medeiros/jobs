@@ -7,7 +7,7 @@ An app for listing jobs.
 ## Usage
 
 ### Migrations
-To create all the nessesary tables and columns, run the following
+To create all the necessary tables and columns, run the following
 ```
 php artisan migrate
 ```
@@ -26,5 +26,17 @@ This app uses the framework Laravel and the server runs by using the Package Sai
 1. Make sure you have Docker installed on your machine
 2. In the Terminal run "composer install" into the project
 3. Run the command "sail up -d" to start the server
-4. Run the command "sail down" to stop the server
+
 ```
+cp .env.example .env
+php artisan key:generate --ansi
+sail up -d
+```
+
+4. After finish docker up the machine:
+```
+sail composer install 
+sail artisan migrate --seed
+```
+
+5. To stop the server run the command "sail down"
