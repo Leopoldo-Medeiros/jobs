@@ -29,7 +29,9 @@ This app uses the framework Laravel and the server runs by using the Package Sai
 
 ```
 cp .env.example .env
+
 php artisan key:generate --ansi
+
 sail up -d
 ```
 
