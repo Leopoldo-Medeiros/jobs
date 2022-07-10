@@ -67,6 +67,11 @@ class ListingController extends Controller
         return view ('listings.edit', ['listing' => $listing]);
     }
 
+    public function logos (Request $request, String $id) {
+        // $id = $request["id"];
+        return $id;
+    }
+
     public function update(Request $request, Listing $listing) {
 
         //        This validation is going to take in an array
